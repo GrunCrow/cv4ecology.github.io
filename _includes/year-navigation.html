@@ -1,0 +1,12 @@
+<nav class="year-navigation" aria-label="{{ page.archive_category | escape }} by year">
+  <p>{{ page.archive_category | escape }} by year:
+    {% assign editions = site.data.archives | reverse %}
+    {% for edition in editions %}
+      {% for link in edition.pages %}
+        {% if link.title == page.archive_category %}
+        <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ edition.year }}</a>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </p>
+</nav>

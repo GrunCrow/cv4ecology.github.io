@@ -1,0 +1,19 @@
+---
+layout: default
+title: Workshop Archives
+description: Browse CV4Ecology course materials, participants, instructors, and speakers by workshop year.
+---
+<section>
+  <header class="main"><h1>Workshop Archives</h1></header>
+  <p>Explore current and past workshop editions. Only available pages are listed.</p>
+  {% for edition in site.data.archives %}
+  <h2>{{ edition.year }}{% if edition.year == site.data.workshop.year %} (current edition){% endif %}</h2>
+  <ul>
+    {% for link in edition.pages %}
+    <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  <h2>Other workshops</h2>
+  <p><a href="{{ '/ai-upskilling-workshop-2025.html' | relative_url }}">2025 AI upskilling workshop</a></p>
+</section>

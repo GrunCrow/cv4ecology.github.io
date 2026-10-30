@@ -1,0 +1,46 @@
+- year: 2027
+  pages:
+    - title: Course Content
+      url: /course_content2027.html
+    - title: Students
+      url: /students2027.html
+    - title: Instructors
+      url: /people2027.html
+    - title: Speakers
+      url: /speakers2027.html
+- year: 2026
+  pages:
+    - title: Course Content
+      url: /course_content2026.html
+    - title: Students
+      url: /students2026.html
+    - title: Instructors
+      url: /people2026.html
+- year: 2025
+  pages:
+    - title: Course Content
+      url: /course_content2025.html
+    - title: Students
+      url: /students2025.html
+    - title: Instructors
+      url: /people2025.html
+- year: 2023
+  pages:
+    - title: Course Content
+      url: /course_content2023.html
+    - title: Students
+      url: /students2023.html
+    - title: Instructors
+      url: /people2023.html
+    - title: Speakers
+      url: /speakers2023.html
+- year: 2022
+  pages:
+    - title: Course Content
+      url: /course_content2022.html
+    - title: Students
+      url: /students2022.html
+    - title: Instructors
+      url: /people2022.html
+    - title: Speakers
+      url: /speakers2022.html

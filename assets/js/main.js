@@ -56,30 +56,51 @@
 				$('.image.object').each(function() {
 
 					var $this = $(this),
-						$img = $this.children('img');
+						$img = $this.find('img');
 
 					// Hide original image.
 						$img.css('opacity', '0');
 
 					// Set background.
 						$this
-							.css('background-image', 'url("' + $img.attr('src') + '")')
+							.css('background-image', 'url("' + ($img.prop('currentSrc') || $img.attr('src')) + '")')
 							.css('background-size', $img.css('object-fit') ? $img.css('object-fit') : 'cover')
 							.css('background-position', $img.css('object-position') ? $img.css('object-position') : 'center');
 
 				});
 
 	// Sidebar.
-		var $sidebar = $('#sidebar'),
-			$sidebar_inner = $sidebar.children('.inner');
+		var $sidebar = $('#sidebar');
+
+		if (!$sidebar.length)
+			return;
+
+		var
+			$sidebar_inner = $sidebar.children('.inner'),
+			$toggle = $('<button type="button" class="toggle" aria-controls="sidebar-content">Menu</button>')
+				.appendTo($sidebar);
+
+		function setSidebar(open, focusMenu) {
+			$sidebar.toggleClass('inactive', !open);
+			$toggle.attr('aria-expanded', String(open))
+				.attr('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+
+			if (!open && $.contains($sidebar_inner[0], document.activeElement))
+				$toggle.trigger('focus');
+
+			$sidebar_inner.prop('inert', !open).attr('aria-hidden', String(!open));
+
+			if (open && focusMenu)
+				$sidebar_inner.find('a, button').first().trigger('focus');
+		}
 
 		// Inactive by default on <= large.
 			breakpoints.on('<=large', function() {
-				$sidebar.addClass('inactive');
+				setSidebar(false);
 			});
 
 			breakpoints.on('>large', function() {
-				$sidebar.removeClass('inactive');
+				setSidebar(true);
 			});
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
@@ -89,16 +110,14 @@
 					.appendTo($head);
 
 		// Toggle.
-			$('<a href="#sidebar" class="toggle">Toggle</a>')
-				.appendTo($sidebar)
-				.on('click', function(event) {
+			$toggle.on('click', function(event) {
 
 					// Prevent default.
 						event.preventDefault();
 						event.stopPropagation();
 
 					// Toggle.
-						$sidebar.toggleClass('inactive');
+						setSidebar($sidebar.hasClass('inactive'), true);
 
 				});
 
@@ -111,32 +130,23 @@
 						if (breakpoints.active('>large'))
 							return;
 
-					// Vars.
-						var $a = $(this),
-							href = $a.attr('href'),
-							target = $a.attr('target');
+					// Leave navigation to the browser, including modified clicks.
+						setSidebar(false);
 
-					// Prevent default.
+				});
+
+				$sidebar.on('keydown', function(event) {
+					if (event.key === 'Escape' && !$sidebar.hasClass('inactive')) {
 						event.preventDefault();
-						event.stopPropagation();
+						setSidebar(false);
+						$toggle.trigger('focus');
+					}
+				});
 
-					// Check URL.
-						if (!href || href == '#' || href == '')
-							return;
-
-					// Hide sidebar.
-						$sidebar.addClass('inactive');
-
-					// Redirect to href.
-						setTimeout(function() {
-
-							if (target == '_blank')
-								window.open(href);
-							else
-								window.location.href = href;
-
-						}, 500);
-
+				$sidebar.on('focusout', function(event) {
+					if (breakpoints.active('<=large') && event.relatedTarget
+					&& !$.contains($sidebar[0], event.relatedTarget))
+						setSidebar(false);
 				});
 
 			// Prevent certain events inside the panel from bubbling.
@@ -159,7 +169,7 @@
 							return;
 
 					// Deactivate.
-						$sidebar.addClass('inactive');
+						setSidebar(false);
 
 				});
 
@@ -256,13 +266,6 @@
 					// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');
 
-				});
-
-				$this.on('keydown', function(event) {
-					if (event.which === 13 || event.which === 32) {
-						event.preventDefault();
-						$this.trigger('click');
-					}
 				});
 
 			});

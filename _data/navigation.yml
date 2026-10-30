@@ -1,0 +1,26 @@
+- title: Homepage
+  url: /index.html
+- title: Course Materials
+  id: course-menu
+  links:
+    - title: Overview
+      url: /course_details.html
+    - title: Course Content
+      prefix: course_content
+- title: People
+  id: people-menu
+  links:
+    - title: Students
+      prefix: students
+    - title: Instructors
+      prefix: people
+    - title: Speakers
+      prefix: speakers
+- title: Important Dates
+  url: /important_dates.html
+- title: FAQ
+  url: /faq.html
+- title: Apply
+  url: /call_for_applications.html
+- title: Past Workshops
+  url: /archive.html

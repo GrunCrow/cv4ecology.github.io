@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<!-- Editorial by HTML5 UP | html5up.net | CCA 3.0 license (html5up.net/license) -->
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="is-preload">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="wrapper">
+      <main id="main" tabindex="-1">
+        <div class="inner">
+          {% include header.html %}
+          {{ content }}
+        </div>
+      </main>
+      {% unless page.sidebar == false %}{% include sidebar.html %}{% endunless %}
+    </div>
+    <script defer src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

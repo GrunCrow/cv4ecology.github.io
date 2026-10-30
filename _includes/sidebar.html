@@ -1,0 +1,38 @@
+<aside id="sidebar" aria-label="Site navigation and contact">
+  <div class="inner" id="sidebar-content">
+    <nav id="menu" aria-label="Main navigation">
+      <header class="major"><h2>Menu</h2></header>
+      <ul>
+        {% for item in site.data.navigation %}
+        <li>
+          {% if item.links %}
+          <button type="button" class="opener active" aria-label="{{ item.title | escape }}" aria-expanded="true" aria-controls="{{ item.id }}">{{ item.title | escape }}</button>
+          <ul id="{{ item.id }}">
+            {% for link in item.links %}
+            {% assign link_url = link.url %}
+            {% if link.prefix %}{% assign link_url = '/' | append: link.prefix | append: site.data.workshop.year | append: '.html' %}{% endif %}
+            <li><a href="{{ link_url | relative_url }}"{% if page.url == link_url %} aria-current="page"{% endif %}>{{ link.title | escape }}</a></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <a href="{{ item.url | relative_url }}"{% if page.url == item.url or page.url == "/" and item.url == "/index.html" %} aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <section>
+      <header class="major"><h2>Get in touch</h2></header>
+      <ul class="contact">
+        <li class="icon solid fa-envelope"><a href="mailto:{{ site.data.workshop.email }}">{{ site.data.workshop.email }}</a></li>
+        <li class="icon brands fa-twitter"><a href="{{ site.data.workshop.twitter }}" target="_blank" rel="noopener noreferrer">@cv4ecology</a></li>
+        <li class="icon brands fa-github"><a href="{{ site.data.workshop.github }}" target="_blank" rel="noopener noreferrer">contribute on GitHub</a></li>
+        <li class="icon solid fa-envelope"><a href="{{ site.data.workshop.mailing_list }}" target="_blank" rel="noopener noreferrer">Sign up for our mailing list!</a></li>
+      </ul>
+    </section>
+    <footer id="footer">
+      <p class="copyright">This material is based upon work supported by the National Science Foundation under Award No. 2330423. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+      <p class="copyright">&copy; California Institute of Technology.<br />All rights reserved.<br />Design: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
+    </footer>
+  </div>
+</aside>

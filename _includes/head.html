@@ -1,0 +1,35 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}" />
+<title>{{ page.title | escape }}{% unless page.title == site.title %} | {{ site.title | escape }}{% endunless %}</title>
+{% assign description = page.description | default: site.description %}
+<meta name="description" content="{{ description | escape }}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.title | escape }}" />
+<meta property="og:title" content="{{ page.title | escape }}" />
+<meta property="og:description" content="{{ description | escape }}" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page.title | escape }}" />
+<meta name="twitter:description" content="{{ description | escape }}" />
+{% if site.url != "" and site.url != nil %}
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ page.image | default: site.social_image | absolute_url }}" />
+<meta name="twitter:image" content="{{ page.image | default: site.social_image | absolute_url }}" />
+{% endif %}
+{% if page.noindex %}<meta name="robots" content="noindex" />{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&amp;family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet" />
+{% if jekyll.environment == "production" and site.google_analytics != "" and site.google_analytics != nil %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics | escape }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', {{ site.google_analytics | jsonify }});
+</script>
+{% endif %}

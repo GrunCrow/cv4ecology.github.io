@@ -1,65 +1,21 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Students</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCEY6Y6YPV"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-DCEY6Y6YPV');
-		</script>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>CV4Ecology Workshop</strong></a>
-									<ul class="icons">
-										<li><a href="https://twitter.com/cv4ecology" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.youtube.com/@cv4ecology" target="_blank" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
-									</ul>
-								</header>
-
-							<!-- Content -->
-								                                <section><!--style="margin-top: -50px;"-->
+---
+layout: default
+archive_category: Students
+title: "CV4Ecology 2026 Students"
+description: "Explore CV4Ecology 2026 participants and their ecological research projects."
+---
+<!-- Content -->
+                                                                <section><!--style="margin-top: -50px;"-->
                                     <header class="main">
                                         <h1>Students 2026</h1>
                                     </header>
-                                    <span class="image main"><img src="images/banner2026.png" alt="" /></span>
+                                    <span class="image main"><img src="{{ '/images/banner2026.png' | relative_url }}" alt="" width="1920" height="800" loading="eager" decoding="async" /></span>
                                     <hr />
-                                    <div>
-                                            <span>
-                                                <h3 style="display: inline;">Students by year: </h3> 
-                                                [<a href="students2022.html">2022</a>] 
-                                                [<a href="students2023.html">2023</a>] 
-                                                [<a href="students2025.html">2025</a>] 
-                                                [<a href="students2026.html">2026</a>] [<a href="students2027.html">2027</a>]
-                                                <!--[<a href="speakers2025.html">2025</a>]-->
-                                            </span>
-                                    </div>
+                                    {% include year-navigation.html %}
                                     <hr />
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_eli.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_eli.jpg' | relative_url }}" alt="Ogonna Eli" width="480" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Ogonna Eli</h4>
@@ -75,14 +31,14 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_snyder.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_snyder.jpg' | relative_url }}" alt="Eric R. Snyder" width="480" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Eric R. Snyder</h4>
     <i>Yang Center for Conservation Bioacoustics, Cornell University</i>
 
     <p class="bio" style="margin-top: 10px;">
-        Eric's research interest lies at the intersection of acoustics and conservation. He uses his physical and technical understanding of ocean acoustics and signal processing to gain insights into the ecology and behavior of whales. Currently, Eric is the Christopher W. Clark Postdoctoral Fellow in the Yang Center for Conservation Bioacoustics. He is developing methods for monitoring baleen whales using telecommunications cables that have been repurposed as acoustic sensors, a technology called Distributed Acoustic Sensing. Eric completed a PhD at Scripps Institution of Oceanography, where he studied beaked whales and ocean acoustics. 
+        Eric's research interest lies at the intersection of acoustics and conservation. He uses his physical and technical understanding of ocean acoustics and signal processing to gain insights into the ecology and behavior of whales. Currently, Eric is the Christopher W. Clark Postdoctoral Fellow in the Yang Center for Conservation Bioacoustics. He is developing methods for monitoring baleen whales using telecommunications cables that have been repurposed as acoustic sensors, a technology called Distributed Acoustic Sensing. Eric completed a PhD at Scripps Institution of Oceanography, where he studied beaked whales and ocean acoustics.
     </p>
     <p class="bio" style="margin-top: 10px;">
         <b>Project:</b> Eric will be using computer vision algorithms to detect baleen whale calls in Distributed Acoustic Sensing (DAS) data. The fiber optic telecom cables used for DAS can span significant distances, providing valuable spatial information and allowing researchers to track their movement and presence. The data can also be collected on land, opening the door for potential real-time monitoring applications. With CV4Ecology, Eric hopes to develop a robust and generalizable whale call detection workflow in order to demonstrate the real-time monitoring capabilities of DAS.
@@ -90,7 +46,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_lopez-posada.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_lopez-posada.jpg' | relative_url }}" alt="Maria Camila López-Posada" width="509" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Maria Camila López-Posada</h4>
@@ -105,7 +61,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_reichert.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_reichert.jpg' | relative_url }}" alt="Jessica Reichert" width="480" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Jessica Reichert</h4>
@@ -120,7 +76,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_vogler.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_vogler.jpg' | relative_url }}" alt="Thomas Vogler" width="481" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Thomas Vogler</h4>
@@ -130,34 +86,34 @@
         I am a PhD Student in the Department of Wildlife Management and Forestry at the University of Inland Norway. My research focuses on estimating the abundance of ungulates in open desert landscapes in Mongolia and Kazakhstan using a range of survey designs and analytical frameworks. I have a strong interest in the application of drones and remote sensing techniques in wildlife research and management. I expect CV4Ecology will provide me with the skills needed to apply computer vision methods across multiple aspects of my research.
     </p>
     <p class="bio" style="margin-top: 10px;">
-        <b>Project:</b> We conducted a large-scale strip-transect drone survey in Altyn Emel National Park, Kazakhstan, with the aim of estimating population sizes of the Asiatic wild ass and the goitered gazelle. Using computer vision, we will detect and classify these two species and integrate the resulting data into a spatial modelling framework to predict population size across the entire national park. Both species are endangered, and traditional survey and analysis methods have proven unreliable in this environment. We believe that combining drone-based surveys with spatial models can provide more robust population estimates and support management and conservation of these species. 
+        <b>Project:</b> We conducted a large-scale strip-transect drone survey in Altyn Emel National Park, Kazakhstan, with the aim of estimating population sizes of the Asiatic wild ass and the goitered gazelle. Using computer vision, we will detect and classify these two species and integrate the resulting data into a spatial modelling framework to predict population size across the entire national park. Both species are endangered, and traditional survey and analysis methods have proven unreliable in this environment. We believe that combining drone-based surveys with spatial models can provide more robust population estimates and support management and conservation of these species.
     </p>
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_grassick.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_grassick.jpeg' | relative_url }}" alt="Abigail Grassick" width="640" height="427" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Abigail Grassick</h4>
     <i>Cornell University </i>
 
     <p class="bio" style="margin-top: 10px;">
-        I’m a 3rd-year PhD candidate in the Department of Computational Biology at Cornell University, advised by Dr. Andrew Hein. My research explores how behaviors scale in collective groups and how the relationships between groups and fitness impact population dynamics. My work combines fieldwork and experimental approaches with advanced computer vision tools to accurately document and analyze animal behavior. 
+        I’m a 3rd-year PhD candidate in the Department of Computational Biology at Cornell University, advised by Dr. Andrew Hein. My research explores how behaviors scale in collective groups and how the relationships between groups and fitness impact population dynamics. My work combines fieldwork and experimental approaches with advanced computer vision tools to accurately document and analyze animal behavior.
     </p>
     <p class="bio" style="margin-top: 10px;">
-        <b>Project:</b> During CV4Ecology 2026 I will be working on the development of computer vision pipelines to automate the processing of underwater, coral reef transects. The purpose of this work is to investigate changes in group sizes over time, to understand how the formation of groups affects population dynamics. This will be a continuation of my work, which builds computer vision pipelines to analyze the behavior of coral reef fish living in large schools. 
+        <b>Project:</b> During CV4Ecology 2026 I will be working on the development of computer vision pipelines to automate the processing of underwater, coral reef transects. The purpose of this work is to investigate changes in group sizes over time, to understand how the formation of groups affects population dynamics. This will be a continuation of my work, which builds computer vision pipelines to analyze the behavior of coral reef fish living in large schools.
     </p>
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_dolan.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_dolan.jpg' | relative_url }}" alt="Shannon Dolan" width="640" height="427" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Shannon Dolan</h4>
     <i>Scripps Institution of Oceanography</i>
 
     <p class="bio" style="margin-top: 10px;">
-        Shannon is a PhD candidate and NDSEG Fellow at Scripps Institution of Oceanography in the Scripps Acoustic Ecology Lab. Her dissertation research focuses on predator-prey dynamics of deep-diving beaked whales in submarine canyons. Shannon combines active acoustic, passive acoustic, in situ environmental data, video footage, and surface satellite data to model spatiotemporal variation in the environment and its influence on bathypelagic organisms and beaked whale presence. Recently, Shannon acquired ship time funding to deploy and design a novel mooring to collect both active acoustic and video footage of marine mammal prey at depths &gt; 1000 m deep. When Shannon is not at sea or analyzing data, she likes to knit or do pottery. 
+        Shannon is a PhD candidate and NDSEG Fellow at Scripps Institution of Oceanography in the Scripps Acoustic Ecology Lab. Her dissertation research focuses on predator-prey dynamics of deep-diving beaked whales in submarine canyons. Shannon combines active acoustic, passive acoustic, in situ environmental data, video footage, and surface satellite data to model spatiotemporal variation in the environment and its influence on bathypelagic organisms and beaked whale presence. Recently, Shannon acquired ship time funding to deploy and design a novel mooring to collect both active acoustic and video footage of marine mammal prey at depths &gt; 1000 m deep. When Shannon is not at sea or analyzing data, she likes to knit or do pottery.
     </p>
     <p class="bio" style="margin-top: 10px;">
         <b>Project:</b> The Midnight Zone (bathypelagic, 1000–4000 m depth) is a dark, mysterious, and under-studied layer of the ocean. Beaked whales, marine mammals capable of remarkable breath holds, routinely dive to this zone to forage, primarily on cephalopods (squid) and fish. To study this region, a mooring equipped with multiple instruments, including a camera, echosounder, and hydrophone, has been deployed. Compared to surface waters, the deep-sea environment has a low density of organisms, making encounters with squid or fish in video footage rare. The CV4Ecology workshop will help me efficiently review hundreds of hours of video (over 6 TB of data) to detect beaked whale prey. Adding to the complexity, the camera records footage in both white-light and red-light modes, which presents an additional challenge for developing a detection model.
@@ -165,7 +121,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_catchen.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_catchen.jpeg' | relative_url }}" alt="Michael D. Catchen" width="640" height="579" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Michael D. Catchen</h4>
@@ -180,7 +136,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_houliston.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_houliston.jpg' | relative_url }}" alt="Holly Houliston" width="480" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Holly Houliston</h4>
@@ -195,7 +151,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_dalgarno.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_dalgarno.jpeg' | relative_url }}" alt="Seb Dalgarno" width="640" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Seb Dalgarno</h4>
@@ -205,19 +161,19 @@
         I am a statistical ecologist at a small consulting company in BC, Canada, primarily working with government researchers to answer ecological questions. My work is mostly in fish population ecology, forest ecology (growth, mortality, carbon stock), and kelp ecology. I develop Bayesian statistical models and analytical tools such as R packages and Shiny apps (often with Bayesian statistical model fitting under the hood).
     </p>
     <p class="bio" style="margin-top: 10px;">
-        <b>Project:</b> I am working with Hakai Institute and Parks Canada to develop a segmentation model to delineate seagrass habitat from high resolution drone imagery. Imagery has been collected along the coast of British Columbia since 2015, often with multiple years of data at a single site. The primary objective is to automate the process of seagrass habitat delineation and facilitate monitoring and change detection of this sensitive habitat moving forward. 
+        <b>Project:</b> I am working with Hakai Institute and Parks Canada to develop a segmentation model to delineate seagrass habitat from high resolution drone imagery. Imagery has been collected along the coast of British Columbia since 2015, often with multiple years of data at a single site. The primary objective is to automate the process of seagrass habitat delineation and facilitate monitoring and change detection of this sensitive habitat moving forward.
     </p>
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_lawson.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_lawson.jpg' | relative_url }}" alt="Shelby Lawson" width="587" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Shelby Lawson</h4>
     <i>Oregon State University</i>
 
     <p class="bio" style="margin-top: 10px;">
-        I am a behavioral ecologist whose research investigates how animals interpret and respond to environmental signals, particularly those indicating danger, and how behavior and cognition have evolved to adapt dynamically to threats across ecological and social contexts. I am currently a postdoctoral scholar at Oregon State University, where I study how red-winged blackbirds recognize and respond to predators using visual and acoustic cues, and whether recognition of certain cues is innate, and if they can be enhanced through social learning. In 2022, I earned my Ph.D. in Integrative Biology from the University of Illinois Urbana-Champaign, where I investigated referential signaling by yellow warblers, specifically how ecological pressures and social context shape alarm call use and interpretation. To explore these questions, my research employs a combination of field experiments with wild birds and lab-based work with captive/hand-raised birds, integrating approaches from behavioral ecology, evolutionary biology, and cognitive psychology.  
+        I am a behavioral ecologist whose research investigates how animals interpret and respond to environmental signals, particularly those indicating danger, and how behavior and cognition have evolved to adapt dynamically to threats across ecological and social contexts. I am currently a postdoctoral scholar at Oregon State University, where I study how red-winged blackbirds recognize and respond to predators using visual and acoustic cues, and whether recognition of certain cues is innate, and if they can be enhanced through social learning. In 2022, I earned my Ph.D. in Integrative Biology from the University of Illinois Urbana-Champaign, where I investigated referential signaling by yellow warblers, specifically how ecological pressures and social context shape alarm call use and interpretation. To explore these questions, my research employs a combination of field experiments with wild birds and lab-based work with captive/hand-raised birds, integrating approaches from behavioral ecology, evolutionary biology, and cognitive psychology.
     </p>
     <p class="bio" style="margin-top: 10px;">
         <b>Project:</b> Animals under threat often produce vocalizations that serve to alert others, deter predators, or recruit assistance. Some species use referential alarm calls to clearly denote a specific type of threat, such as a type/size of predator. Red-winged blackbirds (Agelaius phoeniceus) are highly vocal songbirds that aggressively defend their nests from a range of predators, including brood parasitic cowbirds, mammals, and even snakes. While not currently known to produce referential calls, preliminary data suggests that blackbirds may use complex patterns of alarm call sequences, such as syntax-specific call pairings, to convey information about threat type or severity. The research question my project at CV4E would seek to answer is: Do red-winged blackbirds vary the structure, type, or sequential patterns of alarm calls in response to predator identity, and can certain call combinations predict predator lethality or risk class?
@@ -225,7 +181,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_ketelhohn.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_ketelhohn.jpeg' | relative_url }}" alt="Rachelle Ketelhohn" width="480" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Rachelle Ketelhohn</h4>
@@ -240,7 +196,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_croasdale.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_croasdale.jpeg' | relative_url }}" alt="Emily Croasdale" width="640" height="480" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Emily Croasdale</h4>
@@ -255,7 +211,7 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_shpoliansky.jpeg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_shpoliansky.jpeg' | relative_url }}" alt="Natasha Shpoliansky" width="640" height="480" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Natasha Shpoliansky</h4>
@@ -270,14 +226,14 @@
 </div>
 <div class="bio-container">
     <span class="image left">
-        <img src="images/student_2026_weigt.jpg" alt="" width="50" />
+        <img src="{{ '/images/student_2026_weigt.jpg' | relative_url }}" alt="Nele Weigt" width="484" height="640" loading="lazy" decoding="async" />
     </span>
 
     <h4 style="margin-bottom: -2px;">Nele Weigt</h4>
     <i>Skidaway Institute of Oceanography - University of Georgia</i>
 
     <p class="bio" style="margin-top: 10px;">
-        I am a second year PhD student in the Greer Lab at the Skidaway Institute of Oceanography in Savannah, Georgia. My main research interests are zooplankton ecology and taxonomy. My current research focuses on layered vs mixed water columns and how they influence zooplankton communities in the contrasting oceanographic regimes of the South Atlantic Bight and the Gulf of Mexico, utilizing an in-situ imaging approach using a modular Deep-Focus Plankton Imager. 
+        I am a second year PhD student in the Greer Lab at the Skidaway Institute of Oceanography in Savannah, Georgia. My main research interests are zooplankton ecology and taxonomy. My current research focuses on layered vs mixed water columns and how they influence zooplankton communities in the contrasting oceanographic regimes of the South Atlantic Bight and the Gulf of Mexico, utilizing an in-situ imaging approach using a modular Deep-Focus Plankton Imager.
     </p>
     <p class="bio" style="margin-top: 10px;">
         <b>Project:</b> Continental shelf regions are characterized by strong horizontal and vertical gradients in physical and chemical oceanographic properties, leading to highly complex and dynamic ecosystems. Interactions among variables like temperature, salinity, oxygen, chlorophyll a and light attenuation can influence the distribution, biomass, and community structure of primary producers and zooplankton. One notable outcome of these interactions can be the formation of thin layers. Thin layers are narrow vertical strata with distinct biological, chemical, and/or physical characteristics that can span centimeters to meters in thickness, extend kilometers horizontally, and persist for days to weeks. These layers can alter zooplankton behavior and aggregation patterns, with potentially important but still poorly understood implications for biological production and food web dynamics. This project leverages in situ imaging and sensor-based observations to better resolve these fine-scale features in continental shelf environments. Using datasets collected during stratified summer and mixed fall conditions in the South Atlantic Bight and the northern Gulf of Mexico, the analysis will focus on identifying thin layers and assessing their influence on particle aggregations in relation to environmental variables. Within this class the focus will be comparing the two shelf environments during the stratified summer conditions.
@@ -285,77 +241,3 @@
 </div>
 
                                 </section>
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-										<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-<!-- 								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section> -->
-
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><span class="opener active" role="button" tabindex="0" aria-expanded="true">Course Materials</span>
-										<ul>
-											<li><a href="course_details.html">Overview</a></li>
-											<li><a href="course_content2027.html">Course Content</a></li>
-										</ul>
-									</li>
-									<li><span class="opener active" role="button" tabindex="0" aria-expanded="true">People</span>
-										<ul>
-											<li><a href="students2027.html">Students</a></li>
-											<li><a href="people2027.html">Instructors</a></li>
-											<li><a href="speakers2027.html">Speakers</a></li>
-										</ul>
-									</li>
-									<li><a href="important_dates.html">Important Dates</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="call_for_applications.html">Apply</a></li>
-
-								</ul>
-							</nav>
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto:cv4ecology@csail.mit.edu">cv4ecology@csail.mit.edu</a></li>
-										<li class="icon brands fa-twitter"><a href="https://twitter.com/cv4ecology" target="_blank">@cv4ecology</a></li>
-										<li class="icon brands fa-github"><a href="https://github.com/cv4ecology" target="_blank">contribute on GitHub</a></li>
-										<li class="icon solid fa-envelope"><a href="https://forms.gle/WAD76JceCW9osDm97" target="_blank">Sign up for our mailing list!</a></li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">This material is based upon work supported by the National Science Foundation under Award No. 2330423. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
-									<p class="copyright">&copy; California Institute of Technology.<br/>All rights reserved.<br/>Design: <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</p>
-								</footer>
-
-						</div>
-					</div>
-
-			</div>
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>

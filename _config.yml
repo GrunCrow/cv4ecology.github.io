@@ -1,0 +1,18 @@
+title: CV4Ecology Workshop
+description: Computer vision training, course materials, and research projects for ecology and conservation.
+lang: en
+url: ""
+baseurl: ""
+social_image: /images/20210811_084402.jpg
+# Set only for the production deployment, after reviewing consent requirements.
+google_analytics: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README.txt
+  - LICENSE
+  - LICENSE.txt
+  - vendor
+  - data
+  - demo-python-cells.py
